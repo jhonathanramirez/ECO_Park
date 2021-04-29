@@ -1,0 +1,127 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #f3f3f3;
+	color: #000;
+	font-family: sans-serif;
+}
+.contenedor{
+	width: 90%;
+	max-width: 1024px;
+	margin: 20px auto;
+
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns:  repeat(3, 1fr);
+	grid-template-rows:  repeat(5, auto);
+
+	grid-template-areas:  "header header header"
+					      "li li li"
+					      "contenido contenido contenido"
+					      "noticia1 noticia2 noticia2 "
+					      "contenido2 contenido2 contenido2"
+					      "footer footer footer";
+}
+.contenedor > section, 
+.contenedor .cabecera,
+.contenedor .menuPrincipal, 
+.contenedor .contenido, 
+.contenedor .contenido2,
+  
+.contenedor .footer{
+	background: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.contenedor .cabecera {
+	background: url(file:///D:/Desktop/IngeniariaWEb/proyecto1/ImagenesPaguinaWEBPodocarpus/bosque.png);
+	background-size: 100%;
+	color: #fff;
+	grid-area: header;
+}
+.contenedor .menuPrincipal {
+	background: url(file:///D:/Desktop/IngeniariaWEb/proyecto1/ImagenesPaguinaWEBPodocarpus/fondocafe.jpg);
+	background-size: 100%;
+	padding: 3px;
+	color: #fff;
+	grid-area: li;
+}
+.contenedor .menuPrincipal li a{
+	text-decoration: none ;
+	color: white;
+	display: block; 
+}
+.contenedor .menuPrincipal li{
+	padding: 10px;
+	display: inline-block;
+	text-align: center;
+}
+.contenedor .menuPrincipal li a:hover{
+	background: #9B5F1C;
+	padding: 3px;
+}
+.contenedor .contenido{
+	
+	background: url(file:///D:/Desktop/IngeniariaWEb/proyecto1/ImagenesPaguinaWEBPodocarpus/fondocafe.jpg);
+	display: :line-block;
+	text-align: center;
+	
+}
+.contenedor .contenido2{
+	background: url(file:///D:/Desktop/IngeniariaWEb/proyecto1/ImagenesPaguinaWEBPodocarpus/fondocafe.jpg);
+	display: :line-block;
+	text-align: center;
+}
+
+
+
+.contenedor .noticia1, 
+.contenedor .noticia2{
+	background: url(file:///D:/Desktop/IngeniariaWEb/proyecto1/ImagenesPaguinaWEBPodocarpus/fondocafe.jpg);
+	color: #fff;
+	display: line-block;
+	align-items: center;
+	justify-content: center;
+}
+.contenedor .noticia1{
+	grid-area: noticia1;
+}
+
+.contenedor .noticia2{
+	grid-area: noticia2;
+}
+
+.contenedor .footer{
+	background: #145303;
+	color: #fff;
+	grid-area: footer;
+}
+
+
+@media screen and (max-width: 568px){
+	.contenedor{
+		grid-template-areas: "header header header"
+				      "li li li"
+				      "contenido contenido  contenido"
+				      
+				      "noticia1 noticia2 noticia2"
+				      "contenido2 contenido2 contenido2"
+				      "footer footer footer";
+	}
+}
+
+@media screen and (max-width: 568px){
+	.contenedor{
+		grid-template-areas: "header header header"
+				      "li li li"
+				      "contenido contenido  contenido"
+				      
+				      "noticia1 noticia1 noticia1"
+				      "noticia2 noticia2 noticia2"
+				      "contenido2 contenido2 contenido2"
+				      "footer footer footer";
+	}
+}
